@@ -76,7 +76,8 @@
       var pipe2v;
       var goodpoint;
       var hit = false;
-      
+      var startjumpcounter = 0;
+      //Set something to false ex. gameOver = false
       timer = 0;
       scorecount = 0;
       
@@ -177,12 +178,21 @@
       }
      }
       
+      function keyPressed() {
+        if (key === " ") {
+          startjumpcounter += 1
+        }
+        if (startjumpcounter >= 1){
+            startwarning.style.display === 'none';
+            }
+      }
+      
    
      function keyPressed() {
        if(startwarning.style.display === 'none') {
          if (key === " ") {
           player.jump();
-         
+          startwarning.style.display === 'none';
          }
           
           
