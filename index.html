@@ -178,7 +178,7 @@
       }
      }
       
-      function keyPressed() {
+    /*  function keyPressed() {
         if (key === " ") {
           startjumpcounter += 1
         }
@@ -186,13 +186,16 @@
             startwarning.style.display === 'none';
             }
       }
-      
+      */
    
      function keyPressed() {
-       if(startwarning.style.display === 'none') {
+     //  if(startwarning.style.display === 'none') {
          if (key === " ") {
-          player.jump();
+         for(var i = 0; i<2; i++) { 
+            timer = millis();
+          }
           startwarning.style.display === 'none';
+            player.jump();
          }
           
           
@@ -206,6 +209,7 @@
         
            var startwarning = gid('startwarning');
            gid('startwarning').style.display = "none";
+      //Resets the timer, so it doesn't matter how long it takes the start the game
            for(var i = 0; i<2; i++) { 
             timer = millis();
           }
