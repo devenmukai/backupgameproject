@@ -195,11 +195,14 @@
         if (startjumpcounter >= 1){
             var startwarning = gid('startwarning');
             gid('startwarning').style.display === 'none';
+            if (key === " ") {
+              player.jump();
+            }
             for(var i = 0; i<2; i++) {
               timer = millis();
             }
             }
-       if(startwarning.style.display === 'none') {
+    /*   if(startwarning.style.display === 'none') {
          if (key === " ") {
          for(var i = 0; i<2; i++) { 
             timer = millis();
@@ -209,7 +212,7 @@
          }
           
           
-      }
+      }*/
   }
      
     
