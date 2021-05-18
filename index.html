@@ -179,16 +179,22 @@
      }
       
       function keyPressed() {
-        if (key === " ") {
+        /*if (key === " ") {
           startjumpcounter += 1
         }
         if (startjumpcounter >= 1){
             startwarning.style.display === 'none';
             }
-      }
+      }*/
       
    
      function keyPressed() {
+       if (key === " ") {
+          startjumpcounter += 1
+        }
+        if (startjumpcounter >= 1){
+            startwarning.style.display === 'none';
+            }
        if(startwarning.style.display === 'none') {
          if (key === " ") {
          for(var i = 0; i<2; i++) { 
